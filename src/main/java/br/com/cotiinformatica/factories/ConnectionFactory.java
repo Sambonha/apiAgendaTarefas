@@ -8,7 +8,7 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 
 		try {
-			var host = "jdbc:postgresql://localhost:5432/bd_agendatarefas";
+			var host = "jdbc:postgresql://localhost:5433/bd_agendatarefas";
 			var user = "postgres";
 			var pass = "coti";
 
