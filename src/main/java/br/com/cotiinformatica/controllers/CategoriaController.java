@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bf73ba (Adicionando novas funcionalidades e atualizações)
 package br.com.cotiinformatica.controllers;
 
 import org.springframework.http.ResponseEntity;
@@ -8,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.cotiinformatica.repositories.CategoriaRepository;
 
+<<<<<<< HEAD
 @RestController
 @RequestMapping("/api/v1/categorias")
 public class CategoriaController {
@@ -32,4 +36,24 @@ public class CategoriaController {
 
 	}
 
+=======
+
+@RequestMapping("/api/v1/categorias")
+@RestController
+public class CategoriaController {
+	private CategoriaRepository categoriaRepository = new CategoriaRepository();
+	
+	@GetMapping
+	public ResponseEntity<?> getAll(){
+		try {
+			var lista = categoriaRepository.findAll();
+			
+			return ResponseEntity.status(200).body(lista);
+		}
+		catch(Exception e) {
+			return ResponseEntity.status(500).body(e.getMessage());
+		}
+	}
+	
+>>>>>>> 0bf73ba (Adicionando novas funcionalidades e atualizações)
 }

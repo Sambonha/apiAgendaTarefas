@@ -13,6 +13,7 @@ import io.swagger.v3.oas.models.info.License;
 public class SwaggerConfiguration {
 
 	@Bean
+<<<<<<< HEAD
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
@@ -32,3 +33,32 @@ public class SwaggerConfiguration {
 	
 	}
 }	
+=======
+	public OpenAPI customOpenAPI() {
+		return new OpenAPI()
+				.info(new Info()
+						.title("API - Sistema de Agenda de tarefas")
+						.description("Documentação da API do sistema desenvolvido em Spring Boot")
+						.version("1.0.0")
+						.contact(new Contact()
+								.name("COTI INFORMÁTICA")
+								.url("https://www.cotiinformatica.com.br")
+								.email("contato@cotiinformatica.com.br"))
+						.license(new License()
+								.name("Apache 2.0")
+								.url("http://springdoc.org")))
+						.externalDocs(new ExternalDocumentation()
+								.description("Mais informações")
+								.url("https://github.com/cotiinformatica"));
+								
+						
+						
+						
+						
+		
+	}
+	
+	
+	
+}
+>>>>>>> 0bf73ba (Adicionando novas funcionalidades e atualizações)

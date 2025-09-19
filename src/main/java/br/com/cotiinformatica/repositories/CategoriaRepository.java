@@ -13,6 +13,7 @@ public class CategoriaRepository {
 
 	public List<Categoria> findAll() {
 		try {
+<<<<<<< HEAD
 
 			var connection = connectionFactory.getConnection();
 
@@ -20,6 +21,14 @@ public class CategoriaRepository {
 						select id, nome
 						from categoria
 						order by nome
+=======
+			var connection = connectionFactory.getConnection();
+
+			var sql = """
+							select id, nome
+							from categoria
+							order by nome
+>>>>>>> 0bf73ba (Adicionando novas funcionalidades e atualizações)
 					""";
 
 			var statement = connection.prepareStatement(sql);
@@ -35,6 +44,7 @@ public class CategoriaRepository {
 				categoria.setNome(result.getString("nome"));
 
 				lista.add(categoria);
+<<<<<<< HEAD
 
 			}
 
@@ -45,5 +55,19 @@ public class CategoriaRepository {
 			e.printStackTrace();
 			return null;
 		}
+=======
+			}
+
+			connection.close();
+
+			return lista;
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+			return null;
+		}
+
+>>>>>>> 0bf73ba (Adicionando novas funcionalidades e atualizações)
 	}
 }

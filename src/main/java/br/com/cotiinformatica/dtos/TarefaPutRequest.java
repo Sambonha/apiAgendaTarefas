@@ -1,0 +1,17 @@
+package br.com.cotiinformatica.dtos;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
+public class TarefaPutRequest {
+	
+	private String idTarefa;
+	private String nomeTarefa;
+	private String dataTarefa;
+	private String prioridadeTarefa;
+	private Boolean finalizado;
+	private String idCategoria;
+
+}

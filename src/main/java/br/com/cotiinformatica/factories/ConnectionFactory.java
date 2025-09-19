@@ -8,9 +8,15 @@ public class ConnectionFactory {
 	public Connection getConnection() {
 
 		try {
+<<<<<<< HEAD
 			var host = "jdbc:postgresql://localhost:5433/bd_agendatarefas";
 			var user = "postgres";
 			var pass = "coti";
+=======
+			var host = "jdbc:postgresql://localhost:5432/bd_agendatarefas";
+			var user = "postgres";
+			var pass = "sambonha";
+>>>>>>> 0bf73ba (Adicionando novas funcionalidades e atualizações)
 
 			return DriverManager.getConnection(host, user, pass);
 
